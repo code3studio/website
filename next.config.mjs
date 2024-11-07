@@ -16,6 +16,16 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/docs",
+        destination: "https://docs.schemamap.io",
+        permanent: false,
+      },
+      {
+        source: "/blog",
+        destination: "https://docs.schemamap.io/blog",
+        permanent: false,
+      },
+      {
         source: "/status",
         destination: "https://stats.uptimerobot.com/ZELp9fP5Xn/",
         permanent: false,
