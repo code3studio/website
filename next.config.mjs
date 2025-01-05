@@ -7,7 +7,7 @@ const nextConfig = {
     return [
       {
         source: "/meeting",
-        destination: "https://savvycal.com/schemamap/talk",
+        destination: "https://github.com/pysageai/pysage",
         permanent: false,
       },
       {

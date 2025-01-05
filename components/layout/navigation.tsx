@@ -31,7 +31,7 @@ const Navigation: React.FC = () => {
         </Link>
         <Button
           as={Link}
-          href="https://github.com/pysageai/cli_agent"
+          href="https://github.com/pysageai/pysage"
           isExternal
           colorScheme="teal"
           size="sm"

@@ -17,7 +17,7 @@ import { title } from "process";
 
 const siteConfig = {
   logo: Logo,
-  meetingUrl: "https://savvycal.com/schemamap/talk",
+  meetingUrl: "https://github.com/pysageai/pysage",
   seo: {
     title: "PySage",
     description: "Sync data from any Postgres DB to another",
@@ -82,7 +82,7 @@ const siteConfig = {
         label: "Telegram",
       },
       {
-        href: "https://github.com/pysageai/cli_agent",
+        href: "https://github.com/pysageai/pysage",
         label: <FaGithub size="20" />,
       },
     ],
