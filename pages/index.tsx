@@ -59,7 +59,7 @@ const Home: NextPage = () => {
     <Box>
       <SEO
         title="PySage: AI-powered agents with seamless integration for OpenAI, Anthropic, and Solana blockchain."
-        description="The best data migration solution you’ll never have to maintain."
+        description="The ultimate Web3 agent framework. Powered by Python."
       />
       <Box>
         <HeroSection />
