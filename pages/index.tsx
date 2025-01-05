@@ -302,7 +302,7 @@ const BinaryInstall = () => {
                   <Link
                    
                   >
-                    "example-agent"
+                   &quot;example-agent&quot;
                   </Link>
                 </Text>
                 <Text color="yellow.400" display="inline">
