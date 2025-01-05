@@ -114,7 +114,7 @@ const HeroSection: React.FC = () => {
             <FallInPlace delay={0.2}>
               <Center mt={10} justifyItems={"center"}>
                 <ButtonLink
-                  href={"/demo"}
+                  href={"https://github.com/pysageai/cli_agent"}
                   variant="primary"
                   data-attr="signup"
                   px={30}
