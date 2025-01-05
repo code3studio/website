@@ -19,20 +19,20 @@ const siteConfig = {
   logo: Logo,
   meetingUrl: "https://savvycal.com/schemamap/talk",
   seo: {
-    title: "Schemamap.io",
+    title: "PySage",
     description: "Sync data from any Postgres DB to another",
     openGraph: {
       type: "website",
       locale: "en_US",
-      url: "https://schemamap.io",
-      site_name: "Schemamap.io",
-      title: "Schemamap | Sync data from any Postgres DB to another",
+      url: "https://pysage.fun",
+      site_name: "PySage.fun",
+      title: "Py Sage | Create Autonomous AI Agents Locally",
       description:
-        "The best data migration solution you’ll never have to maintain.",
+        "The ultimate Web3 agent framework",
       images: [
         {
-          url: "https://schemamap.io//static/favicons/apple-touch-icon.png",
-          alt: "Schemamap.io logo",
+          url: "/static/images/pysageonline.png", // Updated path to the logo
+          alt: "PySage logo",
         },
       ],
     },
@@ -67,35 +67,22 @@ const siteConfig = {
   footer: {
     copyright: (
       <>
-        © 2023-{new Date().getFullYear()} Schemamap.io Kft.{" "}
+        © {new Date().getFullYear()} PySage.fun{" "}
         <Br display={{ base: "initial", md: "none" }} />
         All rights reserved
       </>
     ),
     links: [
-      { href: "/about", label: "About" },
-      {
-        href: "/privacy",
-        label: "Privacy Policy",
-      },
-      {
-        href: "/terms",
-        label: "Terms of Service",
-      },
-      {
-        href: "/eula",
-        label: "EULA",
-      },
       {
         href: "mailto:krisz@schemamap.io",
-        label: "Contact",
+        label: "Twitter",
       },
       {
         href: "/status",
-        label: "Status",
+        label: "Telegram",
       },
       {
-        href: "https://github.com/schemamap/schemamap",
+        href: "https://github.com",
         label: <FaGithub size="20" />,
       },
     ],

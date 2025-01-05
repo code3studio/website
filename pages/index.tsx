@@ -40,8 +40,6 @@ import {
 } from "react-icons/fi";
 import { Features } from "components/features";
 import { BackgroundGradient } from "components/gradients/background-gradient";
-import { Faq } from "components/faq";
-import { Pricing } from "components/pricing/pricing";
 
 import { ButtonLink } from "components/button-link/button-link";
 
@@ -54,13 +52,13 @@ import { FaBrain } from "react-icons/fa";
 import { useConsent } from "components/consent";
 import { HeroImages } from "components/hero/tabs";
 import CodePill from "components/highlights/codepill";
-import { CompaniesSection } from "components/companies";
+
 
 const Home: NextPage = () => {
   return (
     <Box>
       <SEO
-        title="Schemamap.io - Sync data from any Postgres DB to another"
+        title="PySage: AI-powered agents with seamless integration for OpenAI, Anthropic, and Solana blockchain."
         description="The best data migration solution you’ll never have to maintain."
       />
       <Box>
@@ -68,9 +66,8 @@ const Home: NextPage = () => {
 
         <FeaturesSection />
 
-        <PricingSection />
 
-        <FaqSection />
+
 
         <QuestionsSection />
       </Box>
@@ -105,12 +102,12 @@ const HeroSection: React.FC = () => {
             zIndex={1000}
             title={
               <FallInPlace delay={0.05}>
-                Sync data from any Postgres DB to another{" "}
+                Modular AI agents with CLI and Twitter integration.{" "}
               </FallInPlace>
             }
             description={
               <FallInPlace delay={0.1} fontWeight="medium">
-                The best data migration solution you’ll never have to maintain.
+                Your gateway to intelligent, decentralized automation.
               </FallInPlace>
             }
           >
@@ -136,7 +133,7 @@ const HeroSection: React.FC = () => {
                     />
                   }
                 >
-                  Try demo
+                  Start Now
                 </ButtonLink>
               </Center>
             </FallInPlace>
@@ -149,7 +146,7 @@ const HeroSection: React.FC = () => {
         </FallInPlace>
       </Container>
 
-      <CompaniesSection />
+   
 
       <InstallSection />
     </Box>
@@ -164,27 +161,26 @@ const DockerInstall = () => {
   return (
     <VStack alignItems={"stretch"} spacing="4" w="full">
       <Text color="muted" fontSize="xl">
-        Replace your existing{" "}
-        <Link isExternal href={"https://hub.docker.com/_/postgres"}>
-          <Code>postgres</Code>
+        Support for Solana{" "}
+        <Link isExternal href={"https://solana.com/docs"}>
+          <Code>API</Code>
         </Link>{" "}
-        container with our image:
+        in pre-release Alpha
       </Text>
 
       <CodePill>
         <Box width={"full"}>
           <Text color="blue.400" display="inline">
-            $
+          {">"}
           </Text>{" "}
           <Text color="yellow.400" display="inline">
-            docker run
+            solana-api key:
           </Text>{" "}
           <Text color="cyan.300" display="inline">
             <Link
-              href={"https://hub.docker.com/r/schemamap/postgres"}
-              isExternal
+            
             >
-              schemamap/postgres
+              https://api.mainnet-beta.solana.com
             </Link>
           </Text>
         </Box>
@@ -215,10 +211,10 @@ const BinaryInstall = () => {
     <VStack alignItems="flex-start" spacing="0" w="full">
       <Tabs w="full">
         <TabList>
-          <Tab>Brew</Tab>
-          <Tab>Nix</Tab>
-          <Tab>Docker</Tab>
-          <Tab>Binary</Tab>
+          <Tab>Twitter</Tab>
+          <Tab>OpenAi</Tab>
+          <Tab>Solana</Tab>
+          <Tab>Start</Tab>
         </TabList>
 
         <TabPanels>
@@ -226,24 +222,23 @@ const BinaryInstall = () => {
             <CodePill>
               <Box w="full">
                 <Text color="blue.400" display="inline">
-                  $
+                  {">"}
                 </Text>{" "}
                 <Text color="yellow.400" display="inline">
-                  brew install
+                  configure-connection
                 </Text>{" "}
                 <Text color="cyan.300" display="inline">
                   <Link
-                    href="https://github.com/schemamap/homebrew-tap/blob/main/Formula/schemamap.rb"
-                    isExternal
+                   
                   >
-                    schemamap/tap/schemamap
+                    twitter
                   </Link>
                 </Text>
                 <Text color="yellow.400" display="inline">
-                  {" && "}
+                  {" "}
                 </Text>
                 <Text color="cyan.300" display="inline">
-                  schemamap init
+                  
                 </Text>
               </Box>
               <IconButton
@@ -261,24 +256,23 @@ const BinaryInstall = () => {
             <CodePill>
               <Box w="full">
                 <Text color="blue.400" display="inline">
-                  $
+                {">"}
                 </Text>{" "}
                 <Text color="yellow.400" display="inline">
-                  nix profile install
+                  configure-connection
                 </Text>{" "}
                 <Text color="cyan.300" display="inline">
                   <Link
-                    href="https://search.nixos.org/packages?channel=unstable&show=schemamap&from=0&size=50&sort=relevance&type=packages&query=schemamap"
-                    isExternal
+                  
                   >
-                    nixpkgs#schemamap
+                    openai
                   </Link>
                 </Text>
                 <Text color="yellow.400" display="inline">
-                  {" && "}
+                  {" "}
                 </Text>
                 <Text color="cyan.300" display="inline">
-                  schemamap init
+                  
                 </Text>
               </Box>
               <IconButton
@@ -296,24 +290,38 @@ const BinaryInstall = () => {
             <DockerInstall />
           </TabPanel>
           <TabPanel px="0">
-            <OrderedList>
-              <ListItem>
-                Download latest binary from the{" "}
-                <Link
-                  href="https://github.com/schemamap/schemamap/releases/latest"
-                  isExternal
-                  textDecoration={"underline"}
-                >
-                  releases page on Github
-                </Link>
-              </ListItem>
-              <ListItem>
-                Add to your <Code>$PATH</Code>
-              </ListItem>
-              <ListItem>
-                <Code>schemamap init</Code>
-              </ListItem>
-            </OrderedList>
+            <CodePill>
+              <Box w="full">
+                <Text color="blue.400" display="inline">
+                {">"}
+                </Text>{" "}
+                <Text color="yellow.400" display="inline">
+                  load-agent
+                </Text>{" "}
+                <Text color="cyan.300" display="inline">
+                  <Link
+                   
+                  >
+                    "example-agent"
+                  </Link>
+                </Text>
+                <Text color="yellow.400" display="inline">
+                  {" "}
+                </Text>
+                <Text color="cyan.300" display="inline">
+                  
+                </Text>
+              </Box>
+              <IconButton
+                icon={nixCmd.hasCopied ? <FiCheck /> : <FiCopy />}
+                aria-label="Copy install command"
+                onClick={nixCmd.onCopy}
+                variant="ghost"
+                ms="4"
+                isRound
+                color="white"
+              />
+            </CodePill>
           </TabPanel>
         </TabPanels>
       </Tabs>
@@ -325,7 +333,7 @@ const InstallSection = () => {
   return (
     <Highlights display={["none", "initial"]}>
       <HighlightsItem
-        title="Try it with your local Postgres DB, no signup needed"
+        title="Runs on local, no signup needed"
         colSpan={[5]}
       >
         <BinaryInstall />
@@ -362,12 +370,10 @@ const FeaturesSection = () => {
       description={
         <Box mt={6} mb="30" color="white">
           <p>
-            Schemamap introspects your Postgres schema, giving you unprecedented
-            control over your system&apos;s state.
+           PySage lets you manage AI agents with precision, leveraging a modular system and CLI tools
           </p>
           <p>
-            Finally you can copy database records as easily as files, without
-            any DDL changes.
+           Finally, an AI framework that adapts to your needs as effortlessly as updating a command line.
           </p>
         </Box>
       }
@@ -379,21 +385,20 @@ const FeaturesSection = () => {
           title: "Repeatable processes.",
           icon: FiRefreshCcw,
           description:
-            "Data migrations have been historically ad-hoc processes. Schemamap.io allows reruns and amendments, by handling the import process for you.",
+            "PySage ensures consistent agent workflows, allowing easy reruns and adjustments without complex reconfiguration.",
         },
         {
-          title: "Automatic data validation.",
+          title: "Dynamic AI Validation",
           icon: FiCheckSquare,
           description:
-            "All of your Postgres unique and check constraints are considered. This way the feasibility of your data migrations is checked before even importing.",
+            "Automatically validates agent configurations and tasks with LLM integrations, ensuring seamless operation before execution.",
         },
         {
-          title: "(De-)normalization.",
+          title: "Modular Connections",
           icon: FaBrain,
           description: (
             <span>
-              Existing ETL tools only work for single tables. Schemamap.io can{" "}
-              <u>copy related records together</u> automatically.
+              Connect agents to multiple systems effortlessly, from Twitter integration to blockchain tasks, all within a flexible modular framework.
             </span>
           ),
         },
@@ -401,32 +406,27 @@ const FeaturesSection = () => {
           title: "Secure by default.",
           icon: FiLock,
           description:
-            "Schemamap.io uses the least amount of database resources and permissions for each stage of your adoption. By default it cannot even modify your live tables, only preparing data migrations.",
+            "PySage operates with minimal permissions, ensuring your data and systems are secure by default while handling sensitive configurations.",
         },
         {
-          title: "In-memory transforms.",
+          title: "In-Memory Task Processing",
           icon: FiTrendingUp,
           description:
-            "Schemamap.io never stores your data. It transfers it from and to your database in a heavily sandboxed environment, with tens of GBs of RAM readily available. So you don't have to worry about servers.",
+            "Tasks are executed in a highly efficient in-memory environment, leveraging Python's strengths without external server dependencies.",
         },
         {
-          title: "Schema tracking & comparison.",
+          title: "Agent State Tracking",
           icon: FiSearch,
           description:
-            "Track your database schema along with constraints across environments (Local/CI/Staging/Prod) and see how it evolves. Easily spot differences, regardless of the platform or provider.",
+            "Track and compare your agent configurations across environments (Dev/Prod) and adapt to evolving system requirements with ease.",
         },
       ]}
     />
   );
 };
 
-const PricingSection = () => {
-  return <Pricing {...pricing} />;
-};
 
-const FaqSection = () => {
-  return <Faq {...faq} />;
-};
+
 
 const QuestionsSection = () => {
   const { consent, setConsent } = useConsent();
@@ -459,11 +459,7 @@ export async function getStaticProps() {
   return {
     props: {
       announcement: {
-        title: "Support us by becoming a stargazer! 🚀 ",
-        description:
-          '<img src="https://img.shields.io/github/stars/schemamap/schemamap.svg?style=social&label=Star" alt="Schemamap stars on Github" />',
-        href: "https://github.com/schemamap/schemamap",
-        action: false,
+        
       },
     },
   };

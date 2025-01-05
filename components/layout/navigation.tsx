@@ -1,64 +1,44 @@
 import * as React from "react";
-import { HStack } from "@chakra-ui/react";
-
-import { useRouter } from "next/router";
-
-import siteConfig from "data/config";
-
-import { NavLink } from "components/nav-link";
-
-import { useScrollSpy } from "hooks/use-scrollspy";
-
-import { MobileNavButton } from "components/mobile-nav";
-import { MobileNavContent } from "components/mobile-nav";
-import { useDisclosure, useUpdateEffect } from "@chakra-ui/react";
+import { HStack, Box, Button, Link } from "@chakra-ui/react";
 
 const Navigation: React.FC = () => {
-  const mobileNav = useDisclosure();
-  const router = useRouter();
-  const activeId = useScrollSpy(
-    siteConfig.header.links
-      .filter(({ id }) => id)
-      .map(({ id }) => `[id="${id}"]`),
-    {
-      threshold: 0.75,
-    }
-  );
-
-  const mobileNavBtnRef = React.useRef<HTMLButtonElement>();
-
-  useUpdateEffect(() => {
-    mobileNavBtnRef.current?.focus();
-  }, [mobileNav.isOpen]);
-
   return (
-    <HStack spacing="2" flexShrink={0}>
-      {siteConfig.header.links.map(({ href, id, ...props }, i) => {
-        return (
-          <NavLink
-            display={["none", null, "block"]}
-            href={href || `/#${id}`}
-            key={i}
-            isActive={
-              !!(
-                (id && activeId === id) ||
-                (href && !!router.asPath.match(new RegExp(href)))
-              )
-            }
-            {...props}
-          >
-            {props.label}
-          </NavLink>
-        );
-      })}
+    <HStack
+      spacing="4"
+      justify="space-between"
+      w="100%"
+      p="4"
+      bg="transparent" // Transparent background
+      color="white"
+      position="fixed" // Fixed to stay at the top
+      top="0"
+      left="0"
+      zIndex="10" // Ensures it floats above content
+      alignItems="center" // Proper alignment for elements
+    >
+      {/* Logo/Name on the Left */}
+      <Box fontSize="lg" fontWeight="bold" ml="4">
+       
+      </Box>
 
-      <MobileNavButton
-        ref={mobileNavBtnRef}
-        aria-label="Open Menu"
-        onClick={mobileNav.onOpen}
-      />
-
-      <MobileNavContent isOpen={mobileNav.isOpen} onClose={mobileNav.onClose} />
+      {/* Links on the Right */}
+      <HStack spacing="4" mr="4">
+        <Link href="https://twitter.com" isExternal _hover={{ textDecoration: "underline" }}>
+          Twitter
+        </Link>
+        <Link href="https://telegram.org" isExternal _hover={{ textDecoration: "underline" }}>
+          Telegram
+        </Link>
+        <Button
+          as={Link}
+          href="https://github.com"
+          isExternal
+          colorScheme="teal"
+          size="sm"
+        >
+          GitHub
+        </Button>
+      </HStack>
     </HStack>
   );
 };

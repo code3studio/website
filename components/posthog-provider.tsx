@@ -2,7 +2,7 @@ import posthog, { PostHog } from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
 import { useEffect, useState } from "react";
 import { useConsent } from "./consent";
-import { Crisp } from "crisp-sdk-web";
+
 
 export function PHProvider({ children }) {
   const { consent } = useConsent();
@@ -21,9 +21,7 @@ export function PHProvider({ children }) {
         },
         mode
       );
-      if (mode === "cookie") {
-        Crisp.configure("ad7ab300-bd5d-410f-86eb-136d1d846a73");
-      }
+      
       setPhInstance(ph || null);
     };
 
