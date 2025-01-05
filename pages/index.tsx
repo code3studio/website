@@ -137,6 +137,22 @@ const HeroSection: React.FC = () => {
                 </ButtonLink>
               </Center>
             </FallInPlace>
+            <FallInPlace delay={0.3}>
+  <Center mt={10}>
+    <video
+      src="static\images\demo.mp4" // Ensure your video is in the `public` directory if using Next.js
+      controls
+      width="100%"
+      style={{
+        maxWidth: "900px",
+        borderRadius: "10px",
+        boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
+      }}
+    >
+      Your browser does not support the video tag.
+    </video>
+  </Center>
+</FallInPlace>
           </Hero>
         </Stack>
       </Container>
