@@ -23,15 +23,15 @@ const Navigation: React.FC = () => {
 
       {/* Links on the Right */}
       <HStack spacing="4" mr="4">
-        <Link href="https://twitter.com" isExternal _hover={{ textDecoration: "underline" }}>
+        <Link href="https://x.com/PysageDotFun" isExternal _hover={{ textDecoration: "underline" }}>
           Twitter
         </Link>
-        <Link href="https://telegram.org" isExternal _hover={{ textDecoration: "underline" }}>
+        <Link href="https://t.me/pysagesol" isExternal _hover={{ textDecoration: "underline" }}>
           Telegram
         </Link>
         <Button
           as={Link}
-          href="https://github.com"
+          href="https://github.com/pysageai/cli_agent"
           isExternal
           colorScheme="teal"
           size="sm"

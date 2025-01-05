@@ -137,9 +137,9 @@ export default {
         { title: "Onboarding optimization consulting" },
       ],
       action: {
-        label: "Talk to the founder",
-        href: siteConfig.meetingUrl,
-      },
+        label: "Meet the devs",
+        href: "https://t.me/pysagesol", // Updated link
+      },      
     },
   ],
 };

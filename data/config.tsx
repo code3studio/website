@@ -74,15 +74,15 @@ const siteConfig = {
     ),
     links: [
       {
-        href: "mailto:krisz@schemamap.io",
+        href: "https://x.com/PysageDotFun",
         label: "Twitter",
       },
       {
-        href: "/status",
+        href: "https://t.me/pysagesol",
         label: "Telegram",
       },
       {
-        href: "https://github.com",
+        href: "https://github.com/pysageai/cli_agent",
         label: <FaGithub size="20" />,
       },
     ],
