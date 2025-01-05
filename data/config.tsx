@@ -17,7 +17,7 @@ import { title } from "process";
 
 const siteConfig = {
   logo: Logo,
-  meetingUrl: "https://github.com/pysageai/pysage",
+  meetingUrl: "https://t.me/pysagesol",
   seo: {
     title: "PySage",
     description: "Sync data from any Postgres DB to another",
