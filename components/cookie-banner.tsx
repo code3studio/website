@@ -60,8 +60,8 @@ export function Banner() {
     >
       <Text>
         Please accept cookies to help us improve. For more information see our{" "}
-        <Link href={"/privacy"}>Privacy Policy</Link> and our{" "}
-        <Link href={"/terms"}>Terms of Service</Link>.
+        <Link href={"/"}>Privacy Policy</Link> and our{" "}
+        <Link href={"/"}>Terms of Service</Link>.
       </Text>
       <Button variant={"primary"} onClick={acceptCookies}>
         Accept cookies
